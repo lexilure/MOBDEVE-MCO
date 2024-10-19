@@ -10,6 +10,7 @@ drawable grooming
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable leopardgecko
+drawable logo
 drawable parrot
 drawable vet
 id bannerImage

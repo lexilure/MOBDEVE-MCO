@@ -14,7 +14,7 @@
         android:layout_height="200dp"
         android:contentDescription="App Banner"
         android:scaleType="centerCrop"
-        android:src="@drawable/banner"
+        android:src="@drawable/logo"
         android:layout_alignParentTop="true" />
 
     <!-- Services Section Title -->

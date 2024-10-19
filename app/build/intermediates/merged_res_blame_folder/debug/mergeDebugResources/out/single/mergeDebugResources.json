@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Jon\\.gradle\\daemon\\8.7\\mobdeve.com.s20.group3.mco.app-debug-31:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Jon\\.gradle\\daemon\\8.7\\mobdeve.com.s20.group3.mco.app-main-33:\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\Jon\\.gradle\\daemon\\8.7\\mobdeve.com.s20.group3.mco.app-debug-31:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\Jon\\.gradle\\daemon\\8.7\\mobdeve.com.s20.group3.mco.app-main-33:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jon\\.gradle\\daemon\\8.7\\mobdeve.com.s20.group3.mco.app-debug-31:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Jon\\.gradle\\daemon\\8.7\\mobdeve.com.s20.group3.mco.app-main-33:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\Jon\\.gradle\\daemon\\8.7\\mobdeve.com.s20.group3.mco.app-debug-31:\\layout_activity_pet_profile.xml.flat",
@@ -102,6 +102,10 @@
     {
         "merged": "C:\\Users\\Jon\\.gradle\\daemon\\8.7\\mobdeve.com.s20.group3.mco.app-debug-31:\\drawable_grooming.png.flat",
         "source": "C:\\Users\\Jon\\.gradle\\daemon\\8.7\\mobdeve.com.s20.group3.mco.app-main-33:\\drawable\\grooming.png"
+    },
+    {
+        "merged": "mobdeve.com.s20.group3.mco.app-debug-31:/drawable_logo.png.flat",
+        "source": "mobdeve.com.s20.group3.mco.app-main-33:/drawable/logo.png"
     },
     {
         "merged": "C:\\Users\\Jon\\.gradle\\daemon\\8.7\\mobdeve.com.s20.group3.mco.app-debug-31:\\drawable_parrot.png.flat",

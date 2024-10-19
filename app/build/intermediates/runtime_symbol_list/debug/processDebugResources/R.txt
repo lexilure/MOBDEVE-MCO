@@ -3026,6 +3026,7 @@ int drawable ic_mtrl_chip_close_circle 0x7f07009e
 int drawable ic_search_black_24 0x7f07009f
 int drawable indeterminate_static 0x7f0700a0
 int drawable leopardgecko 0x7f0700a1
+int drawable logo 0x7f0700ef
 int drawable m3_avd_hide_password 0x7f0700a2
 int drawable m3_avd_show_password 0x7f0700a3
 int drawable m3_bottom_sheet_drag_handle 0x7f0700a4
