@@ -1,4 +1,4 @@
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     android:id="@+id/main"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,19 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
     <!-- Banner Image -->
     <ImageView
         android:id="@+id/bannerImage"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:contentDescription="App Banner"
         android:scaleType="centerCrop"
         android:src="@drawable/banner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentTop="true" />
 
     <!-- Services Section Title -->
     <TextView
@@ -30,9 +26,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/bannerImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_below="@id/bannerImage"
+        android:layout_centerHorizontal="true" />
 
     <!-- Services Grid -->
     <GridLayout
@@ -40,11 +35,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_gravity = "center"
+        android:layout_gravity="center"
         android:columnCount="3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/servicesTitle">
+        android:layout_below="@id/servicesTitle"
+        android:layout_centerHorizontal="true">
 
         <!-- Individual Service Item (Grooming) -->
         <LinearLayout
@@ -116,9 +110,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/servicesGrid"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_below="@id/servicesGrid"
+        android:layout_centerHorizontal="true" />
 
     <!-- Pets RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
@@ -126,8 +119,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/petsTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_below="@id/petsTitle"
+        android:layout_centerHorizontal="true" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

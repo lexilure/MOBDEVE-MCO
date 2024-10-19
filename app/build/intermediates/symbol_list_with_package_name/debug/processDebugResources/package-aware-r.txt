@@ -3024,6 +3024,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable indeterminate_static
+drawable leopardgecko
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3452,8 +3453,12 @@ id path
 id pathRelative
 id peekHeight
 id percent
-id petImage
-id petName
+id petProfileImage
+id petProfileName
+id petProfileType
+id pet_image
+id pet_name
+id pet_type
 id petsRecyclerView
 id petsTitle
 id pin
@@ -3723,6 +3728,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_pet_profile
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
