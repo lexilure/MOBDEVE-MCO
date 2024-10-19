@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Prepare the dummy data
         List<Pet> petList = new ArrayList<>();
-        petList.add(new Pet("Buddy", "Dog", R.drawable.dog));
-        petList.add(new Pet("Whiskers", "Cat", R.drawable.cat));
-        petList.add(new Pet("Polly", "Parrot", R.drawable.parrot));
-        petList.add(new Pet("Ducky", "Leopard Gecko", R.drawable.leopardgecko));
+        petList.add(new Pet("Buddy", "Dog", R.drawable.dog, "Tomorrow, 7 AM", "Sunny", 22.5, "Home"));
+        petList.add(new Pet("Whiskers", "Cat", R.drawable.cat, "Today, 6 PM", "Cloudy", 24.0, "Apartment"));
+        petList.add(new Pet("Polly", "Parrot", R.drawable.parrot, "Tomorrow, 8 AM", "Rainy", 23.3, "Home"));
+        petList.add(new Pet("Ducky", "Leopard Gecko", R.drawable.leopardgecko, "Today, 10 PM", "Clear", 28.0, "Dorm Room"));
 
         // Set up the RecyclerView
         RecyclerView petsRecyclerView = findViewById(R.id.petsRecyclerView);

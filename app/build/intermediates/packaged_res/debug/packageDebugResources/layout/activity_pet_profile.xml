@@ -4,24 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#F5F5F5"> <!-- Light grey background -->
 
     <ImageView
         android:id="@+id/petProfileImage"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:contentDescription="Pet Image"/>
+        android:contentDescription="Pet Image"
+        android:scaleType="centerCrop"
+        android:padding="8dp"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="16dp"/>
 
     <TextView
         android:id="@+id/petProfileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="Pet Name"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:textColor="#333333"/> <!-- Dark grey for name -->
 
     <TextView
         android:id="@+id/petProfileType"
@@ -29,5 +34,47 @@
         android:layout_height="wrap_content"
         android:text="Pet Type"
         android:textSize="18sp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:textColor="#555555"/> <!-- Medium grey for type -->
+
+    <!-- New TextViews for additional details -->
+    <TextView
+        android:id="@+id/petProfileNextFeeding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Feeding: Not Set"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:textColor="#FF5722"/> <!-- Orange for next feeding -->
+
+    <TextView
+        android:id="@+id/petProfileAreaWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area Weather: Not Set"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center"
+        android:textColor="#FF5722"/> <!-- Orange for area weather -->
+
+    <TextView
+        android:id="@+id/petProfileAreaTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area Temperature: Not Set"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center"
+        android:textColor="#FF5722"/> <!-- Orange for area temperature -->
+
+    <TextView
+        android:id="@+id/petProfileLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location: Not Set"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center"
+        android:textColor="#FF5722"/> <!-- Orange for location -->
 </LinearLayout>

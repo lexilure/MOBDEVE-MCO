@@ -19,14 +19,26 @@ public class PetProfileActivity extends AppCompatActivity {
         String petName = intent.getStringExtra("pet_name");
         String petType = intent.getStringExtra("pet_type");
         int petImageResId = intent.getIntExtra("pet_image", 0);
+        String nextFeeding = intent.getStringExtra("next_feeding");
+        String areaWeather = intent.getStringExtra("area_weather");
+        double areaTemp = intent.getDoubleExtra("area_temp", 0.0);
+        String petLocation = intent.getStringExtra("pet_location");
 
         // Capture the layout's TextViews and ImageView and set the values
         TextView nameTextView = findViewById(R.id.petProfileName);
         TextView typeTextView = findViewById(R.id.petProfileType);
         ImageView petImageView = findViewById(R.id.petProfileImage);
+        TextView nextFeedingTextView = findViewById(R.id.petProfileNextFeeding); // New
+        TextView areaWeatherTextView = findViewById(R.id.petProfileAreaWeather); // New
+        TextView areaTempTextView = findViewById(R.id.petProfileAreaTemp);       // New
+        TextView petLocationTextView = findViewById(R.id.petProfileLocation);    // New
 
         nameTextView.setText(petName);
         typeTextView.setText(petType);
         petImageView.setImageResource(petImageResId);
+        nextFeedingTextView.setText("Next Feeding: " + nextFeeding);
+        areaWeatherTextView.setText("Weather: " + areaWeather);
+        areaTempTextView.setText("Temperature: " + areaTemp + "°C");
+        petLocationTextView.setText("Location: " + petLocation);
     }
 }

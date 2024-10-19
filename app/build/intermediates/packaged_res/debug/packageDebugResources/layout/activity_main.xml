@@ -22,7 +22,7 @@
         android:id="@+id/servicesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Services"
+        android:text="Pet Care"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp"
@@ -40,17 +40,17 @@
         android:layout_below="@id/servicesTitle"
         android:layout_centerHorizontal="true">
 
-        <!-- Individual Service Item (Grooming) -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="16dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:src="@drawable/grooming"
                 android:contentDescription="Grooming" />
 
             <TextView
@@ -60,17 +60,17 @@
                 android:text="Grooming" />
         </LinearLayout>
 
-        <!-- Individual Service Item (Veterinary) -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="16dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:src="@drawable/vet"
                 android:contentDescription="Veterinary" />
 
             <TextView
@@ -80,24 +80,24 @@
                 android:text="Veterinary" />
         </LinearLayout>
 
-        <!-- Individual Service Item (Pet Walking) -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="16dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:contentDescription="Pet Walking" />
+                android:src="@drawable/feeding"
+                android:contentDescription="Feeding" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Pet Walking" />
+                android:text="Feeding" />
         </LinearLayout>
     </GridLayout>
 

@@ -56,6 +56,13 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
             intent.putExtra("pet_name", currentPet.getName());
             intent.putExtra("pet_type", currentPet.getType());
             intent.putExtra("pet_image", currentPet.getImageResId());
+
+            // Pass the new data
+            intent.putExtra("next_feeding", currentPet.getNextFeedingSchedule());
+            intent.putExtra("area_weather", currentPet.getAreaWeather());
+            intent.putExtra("area_temp", currentPet.getAreaTemperature()); // Make sure this is a double
+            intent.putExtra("pet_location", currentPet.getPetLocation());
+
             context.startActivity(intent);
         });
     }
