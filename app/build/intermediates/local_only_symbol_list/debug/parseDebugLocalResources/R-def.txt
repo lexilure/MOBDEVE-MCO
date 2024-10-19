@@ -1,0 +1,27 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable banner
+drawable cat
+drawable dog
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable parrot
+id bannerImage
+id main
+id petImage
+id petName
+id petsRecyclerView
+id petsTitle
+id servicesGrid
+id servicesTitle
+layout activity_main
+layout pet_item
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.MCO
+style Theme.MCO
+xml backup_rules
+xml data_extraction_rules
