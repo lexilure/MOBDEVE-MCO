@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Pet Name -->
+    <EditText
+        android:id="@+id/etPetName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pet Name" />
+
+    <!-- Species -->
+    <EditText
+        android:id="@+id/etSpecies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Species" />
+
+    <!-- Location -->
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location" />
+
+    <!-- Temperature Range (Optional) -->
+    <EditText
+        android:id="@+id/etTempRange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Temperature Range (Optional)" />
+
+    <!-- Humidity Range (Optional) -->
+    <EditText
+        android:id="@+id/etHumidityRange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Humidity Range (Optional)" />
+
+    <!-- Save Button -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Pet"
+        android:onClick="savePet" />
+</LinearLayout>

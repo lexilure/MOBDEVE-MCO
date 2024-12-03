@@ -37,6 +37,10 @@
             android:name=".FeedingActivity">
 
         </activity>
+        <activity
+            android:name=".AddPetActivity">
+
+        </activity>
 
 
 

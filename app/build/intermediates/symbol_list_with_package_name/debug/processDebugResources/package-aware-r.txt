@@ -2997,6 +2997,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable cat
+drawable circular_button
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3005,6 +3006,7 @@ drawable design_snackbar_background
 drawable dog
 drawable feeding
 drawable grooming
+drawable ic_add
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -3289,9 +3291,15 @@ id endToStart
 id enterAlways
 id enterAlwaysCollapsed
 id escape
+id etHumidityRange
+id etLocation
+id etPetName
+id etSpecies
+id etTempRange
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fabAddPet
 id fade
 id fill
 id fill_horizontal
@@ -3460,6 +3468,8 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id petImage
+id petName
 id petProfileAreaTemp
 id petProfileAreaWeather
 id petProfileImage
@@ -3467,9 +3477,7 @@ id petProfileLocation
 id petProfileName
 id petProfileNextFeeding
 id petProfileType
-id pet_image
-id pet_name
-id pet_type
+id petSpecies
 id petsRecyclerView
 id petsTitle
 id pin
@@ -3738,6 +3746,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_pet
 layout activity_feeding
 layout activity_grooming
 layout activity_main

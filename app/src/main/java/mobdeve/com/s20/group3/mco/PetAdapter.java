@@ -1,14 +1,12 @@
 package mobdeve.com.s20.group3.mco;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -23,52 +21,44 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
         this.context = context;
     }
 
-    public static class PetViewHolder extends RecyclerView.ViewHolder {
-        TextView petNameTextView;
-        TextView petTypeTextView;
-        ImageView petImageView;
-
-        public PetViewHolder(@NonNull View itemView) {
-            super(itemView);
-            petNameTextView = itemView.findViewById(R.id.pet_name);
-            petTypeTextView = itemView.findViewById(R.id.pet_type);
-            petImageView = itemView.findViewById(R.id.pet_image);
-        }
-    }
-
-    @NonNull
+    // Create and return a ViewHolder for each pet item
     @Override
-    public PetViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.pet_item, parent, false);
+    public PetViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.pet_item, parent, false);
         return new PetViewHolder(view);
     }
 
+    // Bind data to each ViewHolder
     @Override
-    public void onBindViewHolder(@NonNull PetViewHolder holder, int position) {
-        Pet currentPet = petList.get(position);
-        holder.petNameTextView.setText(currentPet.getName());
-        holder.petTypeTextView.setText(currentPet.getType());
-        holder.petImageView.setImageResource(currentPet.getImageResId());
+    public void onBindViewHolder(PetViewHolder holder, int position) {
+        Pet pet = petList.get(position);
+        holder.petName.setText(pet.getName());
+        holder.petSpecies.setText(pet.getType());
+        // Use a placeholder image for now; you can modify this to display actual images
+        holder.petImage.setImageResource(R.drawable.dog); // Use a default image placeholder
 
-        // Set the onClickListener to open the PetProfileActivity
+        // Optionally, you can handle click events for each pet item
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context, PetProfileActivity.class);
-            intent.putExtra("pet_name", currentPet.getName());
-            intent.putExtra("pet_type", currentPet.getType());
-            intent.putExtra("pet_image", currentPet.getImageResId());
-
-            // Pass the new data
-            intent.putExtra("next_feeding", currentPet.getNextFeedingSchedule());
-            intent.putExtra("area_weather", currentPet.getAreaWeather());
-            intent.putExtra("area_temp", currentPet.getAreaTemperature());
-            intent.putExtra("pet_location", currentPet.getPetLocation());
-
-            context.startActivity(intent);
+            // Handle item click, for example, show a dialog with pet details
         });
     }
 
+    // Return the size of the pet list
     @Override
     public int getItemCount() {
         return petList.size();
+    }
+
+    // ViewHolder class to hold individual pet views
+    public static class PetViewHolder extends RecyclerView.ViewHolder {
+        TextView petName, petSpecies;
+        ImageView petImage;
+
+        public PetViewHolder(View itemView) {
+            super(itemView);
+            petName = itemView.findViewById(R.id.petName);
+            petSpecies = itemView.findViewById(R.id.petSpecies);
+            petImage = itemView.findViewById(R.id.petImage);
+        }
     }
 }

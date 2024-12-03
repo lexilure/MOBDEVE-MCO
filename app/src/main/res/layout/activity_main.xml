@@ -39,7 +39,6 @@
         android:columnCount="3"
         android:layout_below="@id/servicesTitle"
         android:layout_centerHorizontal="true">
-
         <!-- Grooming Button -->
         <LinearLayout
             android:layout_width="wrap_content"
@@ -51,13 +50,11 @@
             android:focusable="true"
             android:background="?android:attr/selectableItemBackground"
             android:onClick="goToGrooming">
-
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/grooming"
                 android:contentDescription="Grooming" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,13 +73,11 @@
             android:focusable="true"
             android:background="?android:attr/selectableItemBackground"
             android:onClick="goToVeterinary">
-
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/vet"
                 android:contentDescription="Veterinary" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,13 +96,11 @@
             android:focusable="true"
             android:background="?android:attr/selectableItemBackground"
             android:onClick="goToFeeding">
-
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/feeding"
                 android:contentDescription="Feeding" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -137,4 +130,17 @@
         android:layout_below="@id/petsTitle"
         android:layout_centerHorizontal="true" />
 
+    <!-- Floating Action Button for adding a new pet -->
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/fabAddPet"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_add"
+        android:contentDescription="Add New Pet"
+        android:background="@drawable/circular_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="goToAddPetActivity" />
 </RelativeLayout>
