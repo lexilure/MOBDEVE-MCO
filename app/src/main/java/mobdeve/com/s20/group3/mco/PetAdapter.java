@@ -60,7 +60,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
             // Pass the new data
             intent.putExtra("next_feeding", currentPet.getNextFeedingSchedule());
             intent.putExtra("area_weather", currentPet.getAreaWeather());
-            intent.putExtra("area_temp", currentPet.getAreaTemperature()); // Make sure this is a double
+            intent.putExtra("area_temp", currentPet.getAreaTemperature());
             intent.putExtra("pet_location", currentPet.getPetLocation());
 
             context.startActivity(intent);

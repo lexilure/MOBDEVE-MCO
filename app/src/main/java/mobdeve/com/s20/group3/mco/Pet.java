@@ -1,6 +1,7 @@
 package mobdeve.com.s20.group3.mco;
 
 public class Pet {
+    private int id;
     private String name;
     private String type;
     private double temp;
@@ -11,6 +12,7 @@ public class Pet {
     private String petLocation;
 
     public Pet(String name, String type, int imageResId, String nextFeedingSchedule, String areaWeather, double areaTemperature, String petLocation) {
+        this.id = id;
         this.name = name;
         this.type = type;
         this.imageResId = imageResId;
@@ -27,6 +29,10 @@ public class Pet {
 
     public String getType() {
         return type;
+    }
+
+    public int getId(){
+        return id;
     }
 
     public int getImageResId() {
