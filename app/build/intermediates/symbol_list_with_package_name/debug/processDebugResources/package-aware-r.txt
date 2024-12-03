@@ -3206,6 +3206,9 @@ id bounceEnd
 id bounceStart
 id buttonPanel
 id cache_measures
+id calendarViewFeeding
+id calendarViewGrooming
+id calendarViewVeterinary
 id callMeasure
 id cancel_button
 id carryVelocity
@@ -3735,8 +3738,11 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_feeding
+layout activity_grooming
 layout activity_main
 layout activity_pet_profile
+layout activity_veterinary
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
