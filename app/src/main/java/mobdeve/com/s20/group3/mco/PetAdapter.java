@@ -1,6 +1,7 @@
 package mobdeve.com.s20.group3.mco;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,12 +35,22 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
         Pet pet = petList.get(position);
         holder.petName.setText(pet.getName());
         holder.petSpecies.setText(pet.getType());
-        // Use a placeholder image for now; you can modify this to display actual images
-        holder.petImage.setImageResource(R.drawable.dog); // Use a default image placeholder
 
-        // Optionally, you can handle click events for each pet item
+        // Use a placeholder image for now; you can modify this to display actual images
+        holder.petImage.setImageResource(R.drawable.dog); // Placeholder image
+
+        // Set OnClickListener for each pet item
         holder.itemView.setOnClickListener(v -> {
-            // Handle item click, for example, show a dialog with pet details
+            // Intent to open PetProfileActivity and pass the pet data
+            Intent intent = new Intent(context, PetProfileActivity.class);
+            intent.putExtra("pet_name", pet.getName());
+            intent.putExtra("pet_type", pet.getType());
+            intent.putExtra("pet_image", R.drawable.dog); // Replace with actual image resource or URL
+            intent.putExtra("next_feeding", pet.getNextFeedingSchedule()); // Assuming this is a property of Pet
+            intent.putExtra("area_weather", pet.getAreaWeather()); // Assuming this is a property of Pet
+            intent.putExtra("area_temp", pet.getAreaTemperature()); // Assuming this is a property of Pet
+            intent.putExtra("pet_location", pet.getPetLocation()); // Assuming this is a property of Pet
+            context.startActivity(intent);
         });
     }
 
