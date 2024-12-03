@@ -25,6 +25,20 @@
             android:name=".PetProfileActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".VeterinaryActivity">
+
+        </activity>
+        <activity
+            android:name=".GroomingActivity">
+
+        </activity>
+        <activity
+            android:name=".FeedingActivity">
+
+        </activity>
+
+
 
     </application>
 

@@ -14,6 +14,9 @@ drawable logo
 drawable parrot
 drawable vet
 id bannerImage
+id calendarViewFeeding
+id calendarViewGrooming
+id calendarViewVeterinary
 id main
 id petProfileAreaTemp
 id petProfileAreaWeather
@@ -29,8 +32,11 @@ id petsRecyclerView
 id petsTitle
 id servicesGrid
 id servicesTitle
+layout activity_feeding
+layout activity_grooming
 layout activity_main
 layout activity_pet_profile
+layout activity_veterinary
 layout pet_item
 mipmap ic_launcher
 mipmap ic_launcher_round

@@ -40,6 +40,12 @@
             android:name="mobdeve.com.s20.group3.mco.PetProfileActivity"
             android:exported="true" >
         </activity>
+        <activity android:name="mobdeve.com.s20.group3.mco.VeterinaryActivity" >
+        </activity>
+        <activity android:name="mobdeve.com.s20.group3.mco.GroomingActivity" >
+        </activity>
+        <activity android:name="mobdeve.com.s20.group3.mco.FeedingActivity" >
+        </activity>
 
         <provider
             android:name="androidx.startup.InitializationProvider"
