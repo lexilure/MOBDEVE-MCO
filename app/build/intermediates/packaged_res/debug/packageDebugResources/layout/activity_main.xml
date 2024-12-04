@@ -123,13 +123,22 @@
         android:layout_below="@id/servicesGrid"
         android:layout_centerHorizontal="true" />
 
+    <!-- Sort Spinner -->
+    <Spinner
+        android:id="@+id/spinnerSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/petsTitle"
+        android:layout_centerHorizontal="true" />
+
     <!-- Pets RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/petsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_below="@id/petsTitle"
+        android:layout_below="@id/spinnerSort"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp" />

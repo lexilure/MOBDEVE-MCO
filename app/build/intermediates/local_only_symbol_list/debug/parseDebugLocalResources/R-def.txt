@@ -45,6 +45,7 @@ id petsTitle
 id removeButton
 id servicesGrid
 id servicesTitle
+id spinnerSort
 layout activity_add_pet
 layout activity_feeding
 layout activity_grooming

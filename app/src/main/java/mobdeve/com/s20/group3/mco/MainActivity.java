@@ -3,9 +3,15 @@ package mobdeve.com.s20.group3.mco;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private PetAdapter petAdapter;
     private PetDatabase petDatabase;
     private List<Pet> petList;
+    private List<String> petTypes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +29,10 @@ public class MainActivity extends AppCompatActivity {
         // Initialize the database
         petDatabase = new PetDatabase(this);
 
-        // Retrieve all pets from the database
+        // Retrieve all pets and distinct pet types from the database
         petList = petDatabase.getAllPets();
+        petTypes = petDatabase.getDistinctPetTypes();
+        petTypes.add(0, "All"); // Add "All" option at the top
 
         // Set up the RecyclerView for pets
         RecyclerView petsRecyclerView = findViewById(R.id.petsRecyclerView);
@@ -31,6 +40,40 @@ public class MainActivity extends AppCompatActivity {
 
         petAdapter = new PetAdapter(petList, this);
         petsRecyclerView.setAdapter(petAdapter);
+
+        // Set up Spinner for sorting
+        Spinner spinnerSort = findViewById(R.id.spinnerSort);
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, petTypes);
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerSort.setAdapter(spinnerAdapter);
+
+        // Handle Spinner selection events
+        spinnerSort.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedType = petTypes.get(position);
+
+                if ("All".equals(selectedType)) {
+                    // Show all pets
+                    petList.clear();
+                    petList.addAll(petDatabase.getAllPets());
+                } else {
+                    // Show pets of the selected type
+                    petList.clear();
+                    petList.addAll(petDatabase.getPetsByType(selectedType));
+                }
+
+                // Notify adapter of data changes
+                petAdapter.notifyDataSetChanged();
+
+                Toast.makeText(MainActivity.this, "Filtered by: " + selectedType, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // No action needed
+            }
+        });
     }
 
     // Method to navigate to AddPetActivity

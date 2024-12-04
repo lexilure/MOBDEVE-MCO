@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PetDatabase {
 
@@ -99,6 +100,54 @@ public class PetDatabase {
         cursor.close();
         db.close();
 
+        return result;
+    }
+
+    // Retrieve all distinct pet types
+    public List<String> getDistinctPetTypes() {
+        List<String> result = new ArrayList<>();
+
+        SQLiteDatabase db = petDatabaseHelper.getReadableDatabase();
+        String query = "SELECT DISTINCT " + PetDatabaseHelper.COLUMN_TYPE +
+                " FROM " + PetDatabaseHelper.TABLE_PETS;
+
+        Cursor cursor = db.rawQuery(query, null);
+        if (cursor.moveToFirst()) {
+            do {
+                result.add(cursor.getString(cursor.getColumnIndexOrThrow(PetDatabaseHelper.COLUMN_TYPE)));
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return result;
+    }
+
+    public List<Pet> getPetsByType(String type) {
+        List<Pet> result = new ArrayList<>();
+
+        SQLiteDatabase db = petDatabaseHelper.getReadableDatabase();
+        String query = "SELECT * FROM " + PetDatabaseHelper.TABLE_PETS +
+                " WHERE " + PetDatabaseHelper.COLUMN_TYPE + " = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{type});
+
+        if (cursor.moveToFirst()) {
+            do {
+                Pet pet = new Pet(
+                        cursor.getString(cursor.getColumnIndexOrThrow(PetDatabaseHelper.COLUMN_NAME)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(PetDatabaseHelper.COLUMN_TYPE)),
+                        cursor.getInt(cursor.getColumnIndexOrThrow(PetDatabaseHelper.COLUMN_IMAGE_RES_ID)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(PetDatabaseHelper.COLUMN_NEXT_FEEDING_SCHEDULE)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(PetDatabaseHelper.COLUMN_AREA_WEATHER)),
+                        cursor.getDouble(cursor.getColumnIndexOrThrow(PetDatabaseHelper.COLUMN_AREA_TEMPERATURE)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(PetDatabaseHelper.COLUMN_PET_LOCATION))
+                );
+                result.add(pet);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
         return result;
     }
 }
