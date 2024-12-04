@@ -3322,6 +3322,8 @@ id ghost_view_holder
 id gone
 id graph
 id graph_wrap
+id groomingListLayout
+id groomingTextView
 id group_divider
 id grouping
 id groups
@@ -3469,7 +3471,9 @@ id pathRelative
 id peekHeight
 id percent
 id petImage
+id petImageView
 id petName
+id petNameTextView
 id petProfileAreaTemp
 id petProfileAreaWeather
 id petProfileImage
@@ -3489,6 +3493,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id removeButton
 id report_drawn
 id reverseSawtooth
 id right
@@ -3768,6 +3773,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout grooming_list_item
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog

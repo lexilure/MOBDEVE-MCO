@@ -8,6 +8,8 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="34" />
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <permission
         android:name="mobdeve.com.s20.group3.mco.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -49,6 +51,7 @@
         <activity android:name="mobdeve.com.s20.group3.mco.AddPetActivity" >
         </activity>
 
+        <!-- Add permission for notifications -->
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="mobdeve.com.s20.group3.mco.androidx-startup"

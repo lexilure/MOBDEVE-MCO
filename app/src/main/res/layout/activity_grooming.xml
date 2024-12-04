@@ -1,6 +1,7 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <!-- Calendar View -->
     <CalendarView
@@ -10,13 +11,14 @@
         android:layout_marginTop="16dp"
         android:layout_alignParentTop="true" />
 
-    <!-- Additional content for Grooming -->
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Grooming List Layout -->
+    <LinearLayout
+        android:id="@+id/groomingListLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select a Date for Grooming"
-        android:textSize="18sp"
+        android:orientation="vertical"
         android:layout_below="@id/calendarViewGrooming"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="16dp" />
 
-</RelativeLayout>
+
+</LinearLayout>

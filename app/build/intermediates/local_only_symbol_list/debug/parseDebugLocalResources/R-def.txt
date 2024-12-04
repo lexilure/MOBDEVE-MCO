@@ -25,9 +25,13 @@ id etPetName
 id etSpecies
 id etTempRange
 id fabAddPet
+id groomingListLayout
+id groomingTextView
 id main
 id petImage
+id petImageView
 id petName
+id petNameTextView
 id petProfileAreaTemp
 id petProfileAreaWeather
 id petProfileImage
@@ -38,6 +42,7 @@ id petProfileType
 id petSpecies
 id petsRecyclerView
 id petsTitle
+id removeButton
 id servicesGrid
 id servicesTitle
 layout activity_add_pet
@@ -46,6 +51,7 @@ layout activity_grooming
 layout activity_main
 layout activity_pet_profile
 layout activity_veterinary
+layout grooming_list_item
 layout pet_item
 mipmap ic_launcher
 mipmap ic_launcher_round
