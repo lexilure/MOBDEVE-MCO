@@ -4,8 +4,19 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <TextView
+        android:id="@+id/addPetTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Add Your Pet"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <!-- Pet Name -->
     <EditText
+        android:layout_marginTop="16dp"
         android:id="@+id/etPetName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,8 +52,10 @@
 
     <!-- Save Button -->
     <Button
+        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Save Pet"
+        android:backgroundTint="@color/buttonBackground"
         android:onClick="savePet" />
 </LinearLayout>

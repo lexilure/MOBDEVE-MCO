@@ -1367,6 +1367,7 @@ int color bright_foreground_inverse_material_dark 0x7f050024
 int color bright_foreground_inverse_material_light 0x7f050025
 int color bright_foreground_material_dark 0x7f050026
 int color bright_foreground_material_light 0x7f050027
+int color buttonBackground 0x7f050307
 int color button_material_dark 0x7f050028
 int color button_material_light 0x7f050029
 int color call_notification_answer_color 0x7f05002a
@@ -2984,6 +2985,7 @@ int drawable abc_textfield_search_activated_mtrl_alpha 0x7f070074
 int drawable abc_textfield_search_default_mtrl_alpha 0x7f070075
 int drawable abc_textfield_search_material 0x7f070076
 int drawable abc_vector_test 0x7f070077
+int drawable add_button 0x7f0700f3
 int drawable avd_hide_password 0x7f070078
 int drawable avd_show_password 0x7f070079
 int drawable banner 0x7f07007a
@@ -3177,6 +3179,7 @@ int id action_text 0x7f080043
 int id actions 0x7f080044
 int id activity_chooser_view_content 0x7f080045
 int id add 0x7f080046
+int id addPetTitle 0x7f080219
 int id alertTitle 0x7f080047
 int id aligned 0x7f080048
 int id all 0x7f080049
@@ -3302,6 +3305,7 @@ int id expanded_menu 0x7f0800c0
 int id fabAddPet 0x7f0800c1
 int id fade 0x7f0800c2
 int id feedingListLayout 0x7f080216
+int id feedingScheduleTitle 0x7f08021a
 int id feedingTextView 0x7f080217
 int id feedingTimeInput 0x7f080218
 int id fill 0x7f0800c3
@@ -3326,6 +3330,7 @@ int id gone 0x7f0800d5
 int id graph 0x7f0800d6
 int id graph_wrap 0x7f0800d7
 int id groomingListLayout 0x7f0800d8
+int id groomingScheduleTitle 0x7f08021b
 int id groomingTextView 0x7f0800d9
 int id group_divider 0x7f0800da
 int id grouping 0x7f0800db
@@ -3625,6 +3630,7 @@ int id up 0x7f080200
 int id useLogo 0x7f080201
 int id vertical_only 0x7f080202
 int id veterinaryListLayout 0x7f080203
+int id veterinaryScheduleTitle 0x7f08021c
 int id veterinaryTextView 0x7f080204
 int id view_offset_helper 0x7f080205
 int id view_transition 0x7f080206

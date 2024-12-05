@@ -92,7 +92,6 @@ public class FeedingActivity extends AppCompatActivity {
             String schedule = selectedDate + " " + feedingTime;
             saveFeedingSchedule(selectedPet, schedule);
 
-            Toast.makeText(this, "Feeding scheduled for " + selectedPet + " on " + schedule, Toast.LENGTH_SHORT).show();
             updateFeedingList();
         });
 

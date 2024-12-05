@@ -70,7 +70,6 @@ public class VeterinaryActivity extends AppCompatActivity {
         builder.setItems(petArray, (dialog, which) -> {
             String selectedPet = pets.get(which).getName(); // Get the selected pet's name
             saveVeterinaryDate(selectedPet, selectedDate);
-            Toast.makeText(this, "Veterinary appointment scheduled for " + selectedPet + " on " + selectedDate, Toast.LENGTH_SHORT).show();
 
             // After scheduling, update the veterinary list
             updateVeterinaryList();
@@ -133,7 +132,7 @@ public class VeterinaryActivity extends AppCompatActivity {
 
             // Set pet name and veterinary date
             petNameTextView.setText(petName);
-            veterinaryTextView.setText("Veterinary Appointment Date: " + veterinaryDate);
+            veterinaryTextView.setText("Appointment Date: " + veterinaryDate);
 
             // Set click listener for the remove button
             removeButton.setOnClickListener(v -> {

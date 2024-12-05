@@ -2,22 +2,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/feedingScheduleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Feeding Schedule"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <!-- Calendar View -->
     <CalendarView
         android:id="@+id/calendarViewFeeding"
+        android:layout_below="@id/feedingScheduleTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_alignParentTop="true" />
-
-    <!-- Text below the Calendar -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select a Date for Feeding"
-        android:textSize="18sp"
-        android:layout_below="@id/calendarViewFeeding"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="16dp" />
 
     <!-- Feeding List Layout -->
     <ScrollView

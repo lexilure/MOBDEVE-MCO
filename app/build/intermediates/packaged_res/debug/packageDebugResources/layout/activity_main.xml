@@ -30,33 +30,38 @@
         android:layout_centerHorizontal="true" />
 
     <!-- Services Grid -->
+    <!-- Services Grid -->
     <GridLayout
         android:id="@+id/servicesGrid"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:columnCount="3"
         android:layout_below="@id/servicesTitle"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:columnCount="3"
+        android:foregroundGravity="center"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        android:paddingEnd="16dp"
+        android:layout_gravity="center">
 
         <!-- Grooming Button -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:gravity="center"
-            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:onClick="goToGrooming">
+            android:gravity="center"
+            android:onClick="goToGrooming"
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/grooming"
-                android:contentDescription="Grooming" />
+                android:contentDescription="Grooming"
+                android:src="@drawable/grooming" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,17 +74,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:gravity="center"
-            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:onClick="goToVeterinary">
+            android:gravity="center"
+            android:onClick="goToVeterinary"
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/vet"
-                android:contentDescription="Veterinary" />
+                android:contentDescription="Veterinary"
+                android:src="@drawable/vet" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -92,17 +99,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:gravity="center"
-            android:orientation="vertical"
+            android:background="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:onClick="goToFeeding">
+            android:gravity="center"
+            android:onClick="goToFeeding"
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/feeding"
-                android:contentDescription="Feeding" />
+                android:contentDescription="Feeding"
+                android:src="@drawable/feeding" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -110,6 +119,7 @@
                 android:text="Feeding" />
         </LinearLayout>
     </GridLayout>
+
 
     <!-- Pets Section Title -->
     <TextView
@@ -148,9 +158,8 @@
         android:id="@+id/fabAddPet"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/ic_add"
         android:contentDescription="Add New Pet"
-        android:background="@drawable/circular_button"
+        android:background="@drawable/add_button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="16dp"

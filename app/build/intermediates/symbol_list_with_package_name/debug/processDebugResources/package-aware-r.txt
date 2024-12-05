@@ -1368,6 +1368,7 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color buttonBackground
 color button_material_dark
 color button_material_light
 color call_notification_answer_color
@@ -2985,6 +2986,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable add_button
 drawable avd_hide_password
 drawable avd_show_password
 drawable banner
@@ -3178,6 +3180,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addPetTitle
 id alertTitle
 id aligned
 id all
@@ -3303,6 +3306,7 @@ id expanded_menu
 id fabAddPet
 id fade
 id feedingListLayout
+id feedingScheduleTitle
 id feedingTextView
 id feedingTimeInput
 id fill
@@ -3327,6 +3331,7 @@ id gone
 id graph
 id graph_wrap
 id groomingListLayout
+id groomingScheduleTitle
 id groomingTextView
 id group_divider
 id grouping
@@ -3626,6 +3631,7 @@ id up
 id useLogo
 id vertical_only
 id veterinaryListLayout
+id veterinaryScheduleTitle
 id veterinaryTextView
 id view_offset_helper
 id view_transition

@@ -1,7 +1,9 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color buttonBackground
 color white
+drawable add_button
 drawable banner
 drawable cat
 drawable circular_button
@@ -15,6 +17,7 @@ drawable leopardgecko
 drawable logo
 drawable parrot
 drawable vet
+id addPetTitle
 id bannerImage
 id calendarViewFeeding
 id calendarViewGrooming
@@ -27,9 +30,11 @@ id etSpecies
 id etTempRange
 id fabAddPet
 id feedingListLayout
+id feedingScheduleTitle
 id feedingTextView
 id feedingTimeInput
 id groomingListLayout
+id groomingScheduleTitle
 id groomingTextView
 id main
 id petImage
@@ -51,6 +56,7 @@ id servicesGrid
 id servicesTitle
 id spinnerSort
 id veterinaryListLayout
+id veterinaryScheduleTitle
 id veterinaryTextView
 layout activity_add_pet
 layout activity_feeding

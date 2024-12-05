@@ -70,7 +70,6 @@ public class GroomingActivity extends AppCompatActivity {
         builder.setItems(petArray, (dialog, which) -> {
             String selectedPet = pets.get(which).getName(); // Get the selected pet's name
             saveGroomingDate(selectedPet, selectedDate);
-            Toast.makeText(this, "Grooming scheduled for " + selectedPet + " on " + selectedDate, Toast.LENGTH_SHORT).show();
 
             // After scheduling, update the grooming list
             updateGroomingList();
