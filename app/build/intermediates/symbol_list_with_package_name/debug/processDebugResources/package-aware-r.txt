@@ -3622,6 +3622,8 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
+id veterinaryListLayout
+id veterinaryTextView
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3840,6 +3842,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout veterinary_list_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
