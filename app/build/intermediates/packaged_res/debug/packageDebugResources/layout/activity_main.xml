@@ -151,18 +151,18 @@
         android:layout_below="@id/spinnerSort"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginEnd="16dp"/>
+
 
     <!-- Floating Action Button for adding a new pet -->
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/fabAddPet"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:contentDescription="Add New Pet"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:background="@drawable/add_button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginEnd="16dp"
         android:onClick="goToAddPetActivity" />
 </RelativeLayout>
