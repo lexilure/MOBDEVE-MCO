@@ -65,8 +65,6 @@ public class MainActivity extends AppCompatActivity {
 
                 // Notify adapter of data changes
                 petAdapter.notifyDataSetChanged();
-
-                Toast.makeText(MainActivity.this, "Filtered by: " + selectedType, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -74,6 +72,28 @@ public class MainActivity extends AppCompatActivity {
                 // No action needed
             }
         });
+    }
+
+    // Ensures that the Pet list is always updated
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Refresh the pet list
+        petList.clear();
+        petList.addAll(petDatabase.getAllPets());
+        petAdapter.notifyDataSetChanged();
+
+        // Refresh the spinner
+        petTypes.clear();
+        petTypes.add("All"); // Add the "All" option
+        petTypes.addAll(petDatabase.getDistinctPetTypes());
+
+        // Notify the spinner adapter of changes
+        Spinner spinnerSort = findViewById(R.id.spinnerSort);
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, petTypes);
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerSort.setAdapter(spinnerAdapter);
     }
 
     // Method to navigate to AddPetActivity
