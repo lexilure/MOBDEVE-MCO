@@ -135,3 +135,5 @@ app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/3a18179140
 app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/3a18179140e7f6bb1f27de16e7292465ca1da170b482a4eec7c7fea569e026c8_3.jar
 app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/mobdeve/com/s20/group3/mco/PetDatabase.dex
 .idea/workspace.xml
+.idea/workspace.xml
+local.properties
