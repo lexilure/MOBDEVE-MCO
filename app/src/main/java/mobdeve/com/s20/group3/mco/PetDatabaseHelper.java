@@ -1,5 +1,6 @@
 package mobdeve.com.s20.group3.mco;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -7,7 +8,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class PetDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "pets.db";
     private static final int DATABASE_VERSION = 1;
-
 
     public static final String TABLE_PETS = "pets";
 
@@ -20,7 +20,6 @@ public class PetDatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_AREA_WEATHER = "areaWeather";
     public static final String COLUMN_AREA_TEMPERATURE = "areaTemperature";
     public static final String COLUMN_PET_LOCATION = "petLocation";
-
 
     private static final String CREATE_TABLE_PETS =
             "CREATE TABLE " + TABLE_PETS + " (" +
@@ -53,8 +52,8 @@ public class PetDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-
     private void insertDummyData(SQLiteDatabase db) {
+        // Replace R.drawable.<image> with appropriate image resource IDs based on the app's drawable
         String[] dummyData = {
                 "INSERT INTO " + TABLE_PETS + " (" +
                         COLUMN_NAME + ", " +
@@ -64,7 +63,7 @@ public class PetDatabaseHelper extends SQLiteOpenHelper {
                         COLUMN_AREA_WEATHER + ", " +
                         COLUMN_AREA_TEMPERATURE + ", " +
                         COLUMN_PET_LOCATION +
-                        ") VALUES ('Buddy', 'Dog', " + R.drawable.dog + ", 'Tomorrow, 7 AM', 'Sunny', 22.5, 'Home')",
+                        ") VALUES ('Buddy', 'Dog', 1, 'Tomorrow, 7 AM', 'Sunny', 22.5, 'Home')",
                 "INSERT INTO " + TABLE_PETS + " (" +
                         COLUMN_NAME + ", " +
                         COLUMN_TYPE + ", " +
@@ -73,7 +72,7 @@ public class PetDatabaseHelper extends SQLiteOpenHelper {
                         COLUMN_AREA_WEATHER + ", " +
                         COLUMN_AREA_TEMPERATURE + ", " +
                         COLUMN_PET_LOCATION +
-                        ") VALUES ('Whiskers', 'Cat', " + R.drawable.cat + ", 'Today, 6 PM', 'Cloudy', 24.0, 'Apartment')",
+                        ") VALUES ('Whiskers', 'Cat', 2, 'Today, 6 PM', 'Cloudy', 24.0, 'Apartment')",
                 "INSERT INTO " + TABLE_PETS + " (" +
                         COLUMN_NAME + ", " +
                         COLUMN_TYPE + ", " +
@@ -82,7 +81,7 @@ public class PetDatabaseHelper extends SQLiteOpenHelper {
                         COLUMN_AREA_WEATHER + ", " +
                         COLUMN_AREA_TEMPERATURE + ", " +
                         COLUMN_PET_LOCATION +
-                        ") VALUES ('Polly', 'Parrot', " + R.drawable.parrot + ", 'Tomorrow, 8 AM', 'Rainy', 23.3, 'Home')",
+                        ") VALUES ('Polly', 'Parrot', 3, 'Tomorrow, 8 AM', 'Rainy', 23.3, 'Home')",
                 "INSERT INTO " + TABLE_PETS + " (" +
                         COLUMN_NAME + ", " +
                         COLUMN_TYPE + ", " +
@@ -91,11 +90,35 @@ public class PetDatabaseHelper extends SQLiteOpenHelper {
                         COLUMN_AREA_WEATHER + ", " +
                         COLUMN_AREA_TEMPERATURE + ", " +
                         COLUMN_PET_LOCATION +
-                        ") VALUES ('Ducky', 'Leopard Gecko', " + R.drawable.leopardgecko + ", 'Today, 10 PM', 'Clear', 28.0, 'Dorm Room')"
+                        ") VALUES ('Ducky', 'Leopard Gecko', 4, 'Today, 10 PM', 'Clear', 28.0, 'Dorm Room')"
         };
 
         for (String query : dummyData) {
             db.execSQL(query);
         }
     }
+
+    // Update pet information
+    public boolean updatePet(int petId, String name, String type, int imageResId, String nextFeedingSchedule, String areaWeather, double areaTemperature, String petLocation) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // ContentValues to hold the updated values
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_NAME, name);
+        values.put(COLUMN_TYPE, type);
+        values.put(COLUMN_IMAGE_RES_ID, imageResId);
+        values.put(COLUMN_NEXT_FEEDING_SCHEDULE, nextFeedingSchedule);
+        values.put(COLUMN_AREA_WEATHER, areaWeather);
+        values.put(COLUMN_AREA_TEMPERATURE, areaTemperature);
+        values.put(COLUMN_PET_LOCATION, petLocation);
+
+        // Update the row where the pet ID matches
+        int rowsAffected = db.update(TABLE_PETS, values, COLUMN_ID + " = ?", new String[]{String.valueOf(petId)});
+
+        db.close();
+        return rowsAffected > 0;
+    }
+
+    // Get pet by ID
+
 }

@@ -77,4 +77,12 @@
         android:layout_marginTop="4dp"
         android:layout_gravity="center"
         android:textColor="#FF5722"/> <!-- Orange for location -->
+
+
+    <Button
+        android:id="@+id/deletePetProfileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Profile"
+        android:backgroundTint="@android:color/holo_red_light" />
 </LinearLayout>

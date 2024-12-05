@@ -19,6 +19,7 @@ id bannerImage
 id calendarViewFeeding
 id calendarViewGrooming
 id calendarViewVeterinary
+id deletePetProfileButton
 id etHumidityRange
 id etLocation
 id etPetName

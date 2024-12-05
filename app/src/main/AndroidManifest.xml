@@ -42,7 +42,6 @@
             android:name=".AddPetActivity">
 
         </activity>
-
         <!-- Add permission for notifications -->
     </application>
 
