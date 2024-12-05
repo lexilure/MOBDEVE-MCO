@@ -19,7 +19,7 @@
             android:id="@+id/petImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/placeholder_image" />
+            android:src="@drawable/dog" />
 
         <TextView
             android:id="@+id/petName"

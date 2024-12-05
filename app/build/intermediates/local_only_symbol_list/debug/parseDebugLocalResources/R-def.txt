@@ -14,7 +14,6 @@ drawable ic_launcher_foreground
 drawable leopardgecko
 drawable logo
 drawable parrot
-drawable placeholder_image
 drawable vet
 id bannerImage
 id calendarViewFeeding
@@ -27,6 +26,9 @@ id etPetName
 id etSpecies
 id etTempRange
 id fabAddPet
+id feedingListLayout
+id feedingTextView
+id feedingTimeInput
 id groomingListLayout
 id groomingTextView
 id main
@@ -56,6 +58,8 @@ layout activity_grooming
 layout activity_main
 layout activity_pet_profile
 layout activity_veterinary
+layout dialog_feeding_time
+layout feeding_list_item
 layout grooming_list_item
 layout pet_item
 layout veterinary_list_item

@@ -3103,7 +3103,6 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable parrot
-drawable placeholder_image
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3303,6 +3302,9 @@ id expand_activities_button
 id expanded_menu
 id fabAddPet
 id fade
+id feedingListLayout
+id feedingTextView
+id feedingTimeInput
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3778,6 +3780,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_feeding_time
+layout feeding_list_item
 layout grooming_list_item
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity

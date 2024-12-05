@@ -10,7 +10,7 @@
         android:layout_marginTop="16dp"
         android:layout_alignParentTop="true" />
 
-    <!-- Additional content for Feeding -->
+    <!-- Text below the Calendar -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,5 +18,23 @@
         android:textSize="18sp"
         android:layout_below="@id/calendarViewFeeding"
         android:layout_centerHorizontal="true" />
+
+    <!-- Feeding List Layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/calendarViewFeeding"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/feedingListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
